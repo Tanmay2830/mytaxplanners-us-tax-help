@@ -39,7 +39,8 @@ const handler = async (req: Request): Promise<Response> => {
 
   try {
     const data: NotificationRequest = await req.json();
-    const adminEmail = "tanmay10agarwal@gmail.com";
+    // Using Resend account email - verify a domain to send to other addresses
+    const adminEmail = "ta2830@columbia.edu";
 
     let emailHtml: string;
     let emailSubject: string;
