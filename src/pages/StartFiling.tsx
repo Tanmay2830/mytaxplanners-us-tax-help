@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const steps = [
   { id: 1, title: "Personal Info" },
@@ -92,26 +93,74 @@ const StartFiling = () => {
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    
+    try {
+      // Save to database
+      const { error: dbError } = await supabase
+        .from("filing_submissions")
+        .insert({
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone || null,
+          visa_type: formData.visaType,
+          university: formData.university || null,
+          income_types: formData.selectedIncome,
+          has_scholarship: formData.selectedIncome.includes("scholarship"),
+        });
 
-    toast({
-      title: "Application Submitted!",
-      description: "We'll review your information and contact you within 24 hours.",
-    });
+      if (dbError) {
+        console.error("Database error:", dbError);
+        throw new Error("Failed to save submission");
+      }
 
-    setIsSubmitting(false);
-    setCurrentStep(1);
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      visaType: "",
-      arrivalDate: "",
-      university: "",
-      selectedIncome: [],
-      agreeTerms: false,
-    });
+      // Send email notification
+      const { error: fnError } = await supabase.functions.invoke("send-notification", {
+        body: {
+          type: "filing",
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          visaType: formData.visaType,
+          university: formData.university,
+          incomeTypes: formData.selectedIncome,
+          hasScholarship: formData.selectedIncome.includes("scholarship"),
+        },
+      });
+
+      if (fnError) {
+        console.error("Email notification error:", fnError);
+        // Don't fail the submission if email fails
+      }
+
+      toast({
+        title: "Application Submitted!",
+        description: "We'll review your information and contact you within 24 hours.",
+      });
+
+      setCurrentStep(1);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        visaType: "",
+        arrivalDate: "",
+        university: "",
+        selectedIncome: [],
+        agreeTerms: false,
+      });
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
