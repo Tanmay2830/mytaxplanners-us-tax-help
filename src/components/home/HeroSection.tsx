@@ -28,7 +28,7 @@ export const HeroSection = () => {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-6">
                 <Shield className="w-4 h-4" />
-                Trusted by 5,000+ International Students
+                Trusted by 500+ International Students
               </span>
             </motion.div>
 
@@ -73,7 +73,7 @@ export const HeroSection = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 w-full sm:w-auto"
+                  className="border-primary-foreground/30 text-foreground hover:text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 w-full sm:w-auto bg-white/90"
                 >
                   See How It Works
                 </Button>

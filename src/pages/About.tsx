@@ -28,7 +28,7 @@ const values = [
 ];
 
 const stats = [
-  { value: "5,000+", label: "Students Served" },
+  { value: "500+", label: "Students Served" },
   { value: "50+", label: "Countries Represented" },
   { value: "$2M+", label: "Refunds Secured" },
   { value: "99%", label: "Accuracy Rate" },
@@ -36,19 +36,14 @@ const stats = [
 
 const team = [
   {
-    name: "Sarah Johnson",
-    role: "Founder & Tax Director",
-    bio: "15+ years of experience in international taxation with a focus on non-resident students.",
+    name: "Mahima Agarwal",
+    role: "Founder",
+    bio: "Passionate about making US tax filing simple and accessible for international students.",
   },
   {
-    name: "Michael Chen",
+    name: "Tax Expert",
     role: "Senior Tax Advisor",
     bio: "Specializes in treaty benefits and complex tax situations for F-1 and J-1 visa holders.",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Client Success Manager",
-    bio: "Dedicated to ensuring every client has a smooth and stress-free experience.",
   },
 ];
 
@@ -197,7 +192,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {team.map((member, index) => (
               <motion.div
                 key={member.name}

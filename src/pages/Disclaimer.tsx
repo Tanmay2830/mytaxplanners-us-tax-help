@@ -57,21 +57,7 @@ const Disclaimer = () => {
           >
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                1. No Tax Advice
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                MyTaxPlanners provides tax preparation services. While our team 
-                includes experienced tax professionals, the information and 
-                services we provide should not be construed as professional tax, 
-                legal, or financial advice. For specific advice regarding your 
-                individual tax situation, please consult with a qualified tax 
-                professional, CPA, or tax attorney.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
-                2. Accuracy of Information
+                1. Accuracy of Information
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 The accuracy of your tax return depends on the accuracy and 
@@ -84,7 +70,7 @@ const Disclaimer = () => {
 
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                3. Tax Law Changes
+                2. Tax Law Changes
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Tax laws are complex and change frequently. While we make every 
@@ -96,7 +82,7 @@ const Disclaimer = () => {
 
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                4. No Guarantee of Results
+                3. No Guarantee of Results
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 We do not guarantee any specific tax outcome, refund amount, or 
@@ -107,7 +93,7 @@ const Disclaimer = () => {
 
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                5. IRS Actions
+                4. IRS Actions
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 MyTaxPlanners is not responsible for any actions taken by the 
@@ -119,18 +105,7 @@ const Disclaimer = () => {
 
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                6. Third-Party Links
-              </h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Our website may contain links to third-party websites. We are not 
-                responsible for the content, privacy practices, or accuracy of 
-                information on these external sites.
-              </p>
-            </div>
-
-            <div>
-              <h2 className="text-2xl font-bold text-foreground mb-4">
-                7. Limitation of Liability
+                5. Limitation of Liability
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 To the maximum extent permitted by law, MyTaxPlanners shall not 
@@ -142,20 +117,18 @@ const Disclaimer = () => {
 
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                8. Professional Standards
+                6. Professional Standards
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Our tax preparation services are performed by trained 
                 professionals who follow IRS guidelines and professional 
-                standards. However, we are not a CPA firm, and our services 
-                should not be considered as a substitute for advice from a 
-                licensed CPA or tax attorney for complex tax matters.
+                standards.
               </p>
             </div>
 
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                9. Contact Information
+                7. Contact Information
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 If you have questions about this disclaimer or our services, 

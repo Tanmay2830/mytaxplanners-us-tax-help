@@ -23,7 +23,6 @@ const services = [
       "Direct deposit refund setup",
       "Electronic filing with IRS",
     ],
-    price: "Starting at $149",
   },
   {
     id: "planning",
@@ -40,7 +39,6 @@ const services = [
       "Multi-year tax projections",
       "Tax-efficient investment guidance",
     ],
-    price: "Starting at $199",
   },
   {
     id: "consultancy",
@@ -57,7 +55,6 @@ const services = [
       "Tax residency determination",
       "Year-round email support",
     ],
-    price: "Starting at $99/hour",
   },
 ];
 
@@ -143,9 +140,6 @@ const Services = () => {
                   <p className="text-accent font-medium mb-4">{service.subtitle}</p>
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     {service.description}
-                  </p>
-                  <p className="text-2xl font-bold text-foreground mb-6">
-                    {service.price}
                   </p>
                   <Link to="/start-filing">
                     <Button className="bg-accent hover:bg-emerald-dark text-accent-foreground shadow-emerald">
