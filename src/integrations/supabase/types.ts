@@ -14,7 +14,75 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
+      filing_submissions: {
+        Row: {
+          additional_notes: string | null
+          created_at: string
+          email: string
+          first_name: string
+          has_scholarship: boolean | null
+          id: string
+          income_types: string[]
+          last_name: string
+          phone: string | null
+          university: string | null
+          visa_type: string
+        }
+        Insert: {
+          additional_notes?: string | null
+          created_at?: string
+          email: string
+          first_name: string
+          has_scholarship?: boolean | null
+          id?: string
+          income_types: string[]
+          last_name: string
+          phone?: string | null
+          university?: string | null
+          visa_type: string
+        }
+        Update: {
+          additional_notes?: string | null
+          created_at?: string
+          email?: string
+          first_name?: string
+          has_scholarship?: boolean | null
+          id?: string
+          income_types?: string[]
+          last_name?: string
+          phone?: string | null
+          university?: string | null
+          visa_type?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
