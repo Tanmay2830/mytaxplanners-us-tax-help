@@ -31,15 +31,67 @@ interface FilingNotification {
 
 type NotificationRequest = ContactNotification | FilingNotification;
 
+function formatAdditionalData(jsonStr: string | undefined): string {
+  if (!jsonStr) return "";
+  try {
+    const data = JSON.parse(jsonStr);
+    const fields: { label: string; key: string }[] = [
+      { label: "Middle Name", key: "middleName" },
+      { label: "Date of Birth", key: "dateOfBirth" },
+      { label: "Marital Status", key: "maritalStatus" },
+      { label: "SSN/TIN", key: "ssnTin" },
+      { label: "Mailing Address", key: "mailingAddress" },
+      { label: "Passport Number", key: "passportNumber" },
+      { label: "Passport Issuing Country", key: "passportIssuingCountry" },
+      { label: "Address on Passport", key: "passportAddress" },
+      { label: "Country of Citizenship", key: "countryOfCitizenship" },
+      { label: "Date of First Entry", key: "dateOfFirstEntry" },
+      { label: "Visa Expiry Date", key: "visaExpiryDate" },
+      { label: "Visa Status Change", key: "visaStatusChange" },
+      { label: "Visa Status Change Details", key: "visaStatusChangeDetails" },
+      { label: "Present Status", key: "presentStatus" },
+      { label: "Days of Stay (3 years)", key: "daysOfStay" },
+      { label: "Institute Name", key: "instituteName" },
+      { label: "Institute Address", key: "instituteAddress" },
+      { label: "Director Name", key: "directorName" },
+      { label: "Director Contact", key: "directorContact" },
+      { label: "Number of Employers", key: "numberOfEmployers" },
+      { label: "Estimated Income", key: "estimatedIncome" },
+      { label: "Scholarship", key: "scholarshipAmount" },
+      { label: "Crypto Profit/Loss", key: "cryptoProfitLoss" },
+      { label: "Other Income Details", key: "otherIncomeDetails" },
+      { label: "Other Investment Details", key: "otherInvestmentDetails" },
+      { label: "Other Loan Details", key: "otherLoanDetails" },
+      { label: "Bank Account Type", key: "bankAccountType" },
+      { label: "Bank Routing Number", key: "bankRoutingNumber" },
+      { label: "Bank Account Number", key: "bankAccountNumber" },
+      { label: "Has Dependants", key: "hasDependants" },
+      { label: "Dependant Details", key: "dependantDetails" },
+      { label: "Health Insurance", key: "hasHealthInsurance" },
+      { label: "Health Insurance Details", key: "healthInsuranceDetails" },
+      { label: "Education Loan Interest (1098-E)", key: "hasEducationLoanInterest" },
+      { label: "Education Loan Details", key: "educationLoanDetails" },
+      { label: "Has State ID", key: "hasStateId" },
+      { label: "State ID Number", key: "stateIdNumber" },
+      { label: "State License ID", key: "stateLicenseId" },
+    ];
+
+    return fields
+      .filter((f) => data[f.key])
+      .map((f) => `<p><strong>${f.label}:</strong> ${String(data[f.key]).replace(/\n/g, "<br>")}</p>`)
+      .join("\n");
+  } catch {
+    return `<pre>${jsonStr}</pre>`;
+  }
+}
+
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
     const data: NotificationRequest = await req.json();
-    // Using Resend account email - verify a domain to send to other addresses
     const adminEmail = "myetaxgo@gmail.com";
 
     let emailHtml: string;
@@ -59,6 +111,7 @@ const handler = async (req: Request): Promise<Response> => {
       `;
     } else {
       emailSubject = `New Tax Filing Request: ${data.firstName} ${data.lastName}`;
+      const additionalHtml = formatAdditionalData(data.additionalNotes);
       emailHtml = `
         <h1>New Tax Filing Submission</h1>
         <h2>Personal Information</h2>
@@ -68,11 +121,11 @@ const handler = async (req: Request): Promise<Response> => {
         
         <h2>Tax Information</h2>
         <p><strong>Visa Type:</strong> ${data.visaType}</p>
-        <p><strong>University:</strong> ${data.university || "N/A"}</p>
+        <p><strong>University/Institute:</strong> ${data.university || "N/A"}</p>
         <p><strong>Income Types:</strong> ${data.incomeTypes.join(", ")}</p>
         <p><strong>Has Scholarship:</strong> ${data.hasScholarship ? "Yes" : "No"}</p>
         
-        ${data.additionalNotes ? `<h2>Additional Notes</h2><p>${data.additionalNotes.replace(/\n/g, "<br>")}</p>` : ""}
+        ${additionalHtml ? `<h2>Complete Details</h2>${additionalHtml}` : ""}
         
         <hr>
         <p style="color: #666; font-size: 12px;">Submitted via MyTaxPlanners Filing Form</p>
