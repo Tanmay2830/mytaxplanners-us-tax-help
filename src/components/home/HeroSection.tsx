@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const benefits = [
-  "Expert guidance for F-1 & J-1 visa holders",
+  "Expert guidance for F-1, H-1B & J-1 visa holders",
   "Maximize your tax refunds legally",
   "100% online process",
 ];
@@ -50,7 +50,7 @@ export const HeroSection = () => {
               className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed"
             >
               Navigate the complexities of US tax laws with confidence. 
-              Our expert team specializes in helping non-resident students 
+              Our expert team specializes in helping non-resident taxpayers 
               file accurate tax returns and maximize their refunds.
             </motion.p>
 
