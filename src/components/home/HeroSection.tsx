@@ -28,7 +28,7 @@ export const HeroSection = () => {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-6">
                 <Shield className="w-4 h-4" />
-                Trusted by 500+ International Students
+                Trusted by 500+ International Taxpayers
               </span>
             </motion.div>
 
@@ -40,7 +40,7 @@ export const HeroSection = () => {
             >
               US Tax Filing Made{" "}
               <span className="text-accent">Simple</span> for
-              International Students
+              International Taxpayers
             </motion.h1>
 
             <motion.p

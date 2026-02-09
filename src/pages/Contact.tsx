@@ -13,14 +13,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "contact@mytaxplanners.com",
-    link: "mailto:contact@mytaxplanners.com",
+    value: "myetaxgo@gmail.com",
+    link: "mailto:myetaxgo@gmail.com",
   },
   {
     icon: Phone,
-    title: "Phone",
-    value: "+1 (234) 567-890",
-    link: "tel:+1234567890",
+    title: "WhatsApp",
+    value: "+91 9109602616",
+    link: "https://wa.me/919109602616",
   },
   {
     icon: MapPin,

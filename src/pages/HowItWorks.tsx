@@ -77,6 +77,18 @@ const documents = [
     title: "SSN or ITIN",
     description: "Social Security Number or Individual Tax ID",
   },
+  {
+    title: "I-94 Travel Document",
+    description: "Arrival/departure record for travel history",
+  },
+  {
+    title: "Visa",
+    description: "Your current US visa document",
+  },
+  {
+    title: "Previous Year Returns",
+    description: "Tax return files from previous years, if applicable",
+  },
 ];
 
 const HowItWorks = () => {
@@ -250,7 +262,7 @@ const HowItWorks = () => {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-              Join thousands of international students who trust MyTaxPlanners 
+              Join thousands of international taxpayers who trust MyTaxPlanners 
               with their US taxes.
             </p>
             <Link to="/start-filing">

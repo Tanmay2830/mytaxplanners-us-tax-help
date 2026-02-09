@@ -25,7 +25,7 @@ export const CTASection = () => {
             Ready to File Your Taxes?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Join thousands of international students who have successfully filed 
+            Join thousands of international taxpayers who have successfully filed 
             their US taxes with MyTaxPlanners. Get started today!
           </p>
 

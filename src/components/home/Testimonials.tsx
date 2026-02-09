@@ -63,7 +63,7 @@ export const Testimonials = () => {
             What Our Clients Say
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of international students who trust us with their taxes
+            Join thousands of international taxpayers who trust us with their taxes
           </p>
         </motion.div>
 

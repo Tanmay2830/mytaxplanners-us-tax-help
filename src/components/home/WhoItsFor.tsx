@@ -20,7 +20,7 @@ const audiences = [
   {
     icon: BookOpen,
     title: "First-Time Filers",
-    description: "International students filing US taxes for the first time",
+    description: "International taxpayers filing US taxes for the first time",
   },
 ];
 
@@ -36,10 +36,10 @@ export const WhoItsFor = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Built for International Students
+            Built for International Taxpayers
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We understand the unique tax situations of non-resident students and 
+            We understand the unique tax situations of non-resident taxpayers and 
             scholars in the United States
           </p>
         </motion.div>

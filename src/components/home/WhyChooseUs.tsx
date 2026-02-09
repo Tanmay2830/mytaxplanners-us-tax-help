@@ -5,7 +5,7 @@ const reasons = [
   {
     icon: Award,
     title: "Expert Knowledge",
-    description: "Our team specializes exclusively in non-resident taxation with years of experience helping international students.",
+    description: "Our team specializes exclusively in non-resident taxation with years of experience helping international taxpayers.",
   },
   {
     icon: Clock,
@@ -50,7 +50,7 @@ export const WhyChooseUs = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We're not just another tax service. We're your dedicated partners in 
-            navigating US taxes as an international student.
+            navigating US taxes as an international taxpayer.
           </p>
         </motion.div>
 

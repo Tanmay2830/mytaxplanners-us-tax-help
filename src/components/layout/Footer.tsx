@@ -38,13 +38,13 @@ export const Footer = () => {
               Simplifying your tax journey with expert guidance.
             </p>
             <div className="flex flex-col gap-2 text-sm text-primary-foreground/70">
-              <a href="mailto:contact@mytaxplanners.com" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <a href="mailto:myetaxgo@gmail.com" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Mail className="w-4 h-4" />
-                contact@mytaxplanners.com
+                myetaxgo@gmail.com
               </a>
-              <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-accent transition-colors">
+              <a href="https://wa.me/919109602616" className="flex items-center gap-2 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4" />
-                +1 (234) 567-890
+                +91 9109602616
               </a>
               <span className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
