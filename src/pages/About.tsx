@@ -13,7 +13,7 @@ const values = [
   {
     icon: Heart,
     title: "Student-First",
-    description: "We understand the unique challenges international students face and tailor our services accordingly.",
+    description: "We understand the unique challenges international taxpayers face and tailor our services accordingly.",
   },
   {
     icon: Eye,
@@ -36,12 +36,12 @@ const stats = [
 
 const team = [
   {
-    name: "Mahima Agarwal",
-    role: "Founder",
-    bio: "Passionate about making US tax filing simple and accessible for international students.",
+    name: "Mahima Agrawal",
+    role: "Founder, US CPA",
+    bio: "Passionate about making US tax filing simple and accessible for international taxpayers.",
   },
   {
-    name: "Tax Expert",
+    name: "Manas",
     role: "Senior Tax Advisor",
     bio: "Specializes in treaty benefits and complex tax situations for F-1 and J-1 visa holders.",
   },
@@ -64,7 +64,7 @@ const About = () => {
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80">
               We're on a mission to make US tax filing simple, affordable, and 
-              stress-free for international students.
+              stress-free for international taxpayers.
             </p>
           </motion.div>
         </div>
@@ -89,7 +89,7 @@ const About = () => {
                   <p>
                     MyTaxPlanners was founded by tax professionals who saw firsthand 
                     how confusing and overwhelming US tax filing can be for 
-                    international students.
+                    international taxpayers.
                   </p>
                   <p>
                     Many students struggle with questions like: "Do I need to file 

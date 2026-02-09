@@ -24,7 +24,7 @@ const services = [
     icon: Users,
     title: "Tax Consultancy",
     description:
-      "One-on-one consultations with tax professionals who understand international student tax situations.",
+      "One-on-one consultations with tax professionals who understand international taxpayer tax situations.",
     features: ["Expert Advice", "Complex Situations", "Audit Support", "Year-round Help"],
     link: "/services#consultancy",
   },
