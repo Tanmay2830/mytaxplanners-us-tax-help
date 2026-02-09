@@ -50,7 +50,7 @@ export const HeroSection = () => {
               className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed"
             >
               Navigate the complexities of US tax laws with confidence. 
-              Our expert team specializes in helping non-resident taxpayers 
+              Our expert team specializes in helping international taxpayers 
               file accurate tax returns and maximize their refunds.
             </motion.p>
 

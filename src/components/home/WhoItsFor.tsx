@@ -39,7 +39,7 @@ export const WhoItsFor = () => {
             Built for International Taxpayers
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We understand the unique tax situations of non-resident taxpayers, 
+            We understand the unique tax situations of international taxpayers, 
             workers, and scholars in the United States
           </p>
         </motion.div>
