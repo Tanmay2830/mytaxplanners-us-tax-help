@@ -9,8 +9,8 @@ const audiences = [
   },
   {
     icon: Briefcase,
-    title: "OPT/CPT Workers",
-    description: "Students working under Optional or Curricular Practical Training",
+    title: "H-1B / OPT / CPT Workers",
+    description: "Professionals on H-1B visas and students working under Optional or Curricular Practical Training",
   },
   {
     icon: Globe,
@@ -39,8 +39,8 @@ export const WhoItsFor = () => {
             Built for International Taxpayers
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We understand the unique tax situations of non-resident taxpayers and 
-            scholars in the United States
+            We understand the unique tax situations of non-resident taxpayers, 
+            workers, and scholars in the United States
           </p>
         </motion.div>
 
